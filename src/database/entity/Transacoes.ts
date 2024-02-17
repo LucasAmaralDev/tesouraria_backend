@@ -23,6 +23,13 @@ export class Transacoes {
         length: 10,
         nullable: false
     })
+    pagamento: string
+
+    @Column({
+        type: "varchar",
+        length: 10,
+        nullable: false
+    })
     tipo: string
 
     @Column({
