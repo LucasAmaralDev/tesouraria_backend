@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { AppDataSource } from "../database/data-source";
 import { Categoria } from "../database/entity/Categoria";
+import { verifyAuth } from "../middleware/authMiddleware";
 
 
 const categoriaRoutes = Router()
@@ -29,7 +30,7 @@ categoriaRoutes.get('/categorias', async (req, res) => {
 
 })
 
-categoriaRoutes.post('/categorias', async (req, res) => {
+categoriaRoutes.post('/categorias', verifyAuth, async (req, res) => {
 
     try {
 

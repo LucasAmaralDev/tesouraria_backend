@@ -1,9 +1,10 @@
+require('dotenv').config();
 import express = require('express');
 import cors = require('cors');
 import { AppDataSource } from './database/data-source';
-import { userRoutes } from './routes/user.routes';
 import { categoriaRoutes } from './routes/categoria.routes';
 import { transacoesRouter } from './routes/transacoes.routes';
+import { userRoutes } from './routes/user.routes';
 
 const appDataSource = AppDataSource;
 const app = express();
